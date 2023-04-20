@@ -1,6 +1,7 @@
-# Vue 3 + Vite
+# 软件开发实践大作业前端项目
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+此项目基于vue3和vite搭建，使用element-plus创建框架，axios发送请求。
+此项目用与校园二手交易平台。
 
 ## Recommended IDE Setup
 

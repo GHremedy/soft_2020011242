@@ -1,5 +1,5 @@
 <template>
-    <div class="toolbar">
+    <div class="toolbar" v-if="isLogged" >
         <el-dropdown>
             <el-icon style="margin-right: 8px; margin-top: 1px">
                 <Setting />
@@ -14,20 +14,29 @@
         </el-dropdown>
         <span>Tom</span>
     </div>
+    <div class="toolbar" v-if="!isLogged">
+        <signUp/>
+        <logIn/>
+    </div>
 </template>
 
 <script>
 
 import { Setting } from '@element-plus/icons-vue';
+import { provide } from 'vue';
+import signUp from './signUp.vue';
+import logIn from './logIn.vue';
 export default {
     name: 'mainHeader',
     setup() {
-
-
-        return {}
+        let isLogged = false
+        provide('isLogged',isLogged)
+        return {isLogged}
     },
     components:{
-        Setting
+        Setting,
+        signUp,
+        logIn
     }
 }
 </script>
